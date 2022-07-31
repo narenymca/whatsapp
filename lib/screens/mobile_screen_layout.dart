@@ -12,52 +12,59 @@ class MobileScreenLayout extends StatelessWidget {
     return DefaultTabController(
         length: 3,
         child: Scaffold(
-          appBar: AppBar(
-            backgroundColor: appBarColor,
-            title: const Text(
-              "WhatsApp",
-              style: TextStyle(
-                color: Colors.grey,
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            centerTitle: false,
-            actions: [
-              IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.search,
-                    color: Colors.grey,
-                  )),
-              IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.more_vert,
-                    color: Colors.grey,
-                  )),
-            ],
-            bottom: const TabBar(
-                indicatorColor: tabColor,
-                indicatorWeight: 4,
-                labelColor: tabColor,
-                labelStyle: TextStyle(
+            appBar: AppBar(
+              backgroundColor: appBarColor,
+              title: const Text(
+                "WhatsApp",
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 20,
                   fontWeight: FontWeight.bold,
                 ),
-                unselectedLabelColor: Colors.grey,
-                tabs: [
-                  Tab(
-                    text: 'CHATS',
+              ),
+              centerTitle: false,
+              actions: [
+                IconButton(
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.search,
+                      color: Colors.grey,
+                    )),
+                IconButton(
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.more_vert,
+                      color: Colors.grey,
+                    )),
+              ],
+              bottom: const TabBar(
+                  indicatorColor: tabColor,
+                  indicatorWeight: 4,
+                  labelColor: tabColor,
+                  labelStyle: TextStyle(
+                    fontWeight: FontWeight.bold,
                   ),
-                  Tab(
-                    text: 'STATUS',
-                  ),
-                  Tab(
-                    text: 'CALLS',
-                  ),
-                ]),
-          ),
-          body: const ContactsList(),
-        ));
+                  unselectedLabelColor: Colors.grey,
+                  tabs: [
+                    Tab(
+                      text: 'CHATS',
+                    ),
+                    Tab(
+                      text: 'STATUS',
+                    ),
+                    Tab(
+                      text: 'CALLS',
+                    ),
+                  ]),
+            ),
+            body: const ContactsList(),
+            floatingActionButton: FloatingActionButton(
+              onPressed: () {},
+              backgroundColor: tabColor,
+              child: const Icon(
+                Icons.comment,
+                color: Colors.white,
+              ),
+            )));
   }
 }
